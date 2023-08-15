@@ -1,0 +1,366 @@
+{
+  "name": "RPS",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "HrCQd",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Wybierz swój ruch...",
+      "buttons": [],
+      "selectMenus": [
+        {
+          "placeholder": "Wybierz swój ruch!",
+          "id": "msg-select-cb94861",
+          "tempVarName": "value",
+          "row": "",
+          "min": "1",
+          "max": "1",
+          "mode": "PERSONAL",
+          "time": "",
+          "options": [
+            {
+              "label": "Kamień",
+              "description": "Potężny kamień (pokonuje nożyczki).",
+              "value": "rock",
+              "emoji": "🌑",
+              "default": "false"
+            },
+            {
+              "label": "Papier",
+              "description": "Cienki kawałek papieru (bije kamień).",
+              "value": "paper",
+              "emoji": "📄",
+              "default": "false"
+            },
+            {
+              "label": "Nożyczki",
+              "description": "Ostra para nożyczek (bije papier).",
+              "value": "scissors",
+              "emoji": "✂️",
+              "default": "false"
+            }
+          ],
+          "actions": [
+            {
+              "storage": "1",
+              "varName": "msg",
+              "type": "all",
+              "disable": "disable",
+              "searchValue": "",
+              "name": "Disable Buttons and Selects"
+            },
+            {
+              "storage": "1",
+              "varName": "value",
+              "branches": [
+                {
+                  "comparison": "1",
+                  "value": "rock",
+                  "actions": [
+                    {
+                      "storage": "1",
+                      "varName": "result",
+                      "min": "1",
+                      "max": "3",
+                      "name": "Generate Random Number"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "result",
+                      "branches": [
+                        {
+                          "comparison": "1",
+                          "value": "1",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył kamień, bot używa papieru.\n\nBot wygrywa!!",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "2",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył kamień, bot używa nożyczek.\n\n${member} wygrywa!!",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "3",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył kamień, bot używa kamień.\n\nRemis...",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "Multi-Check Variable"
+                    }
+                  ]
+                },
+                {
+                  "comparison": "1",
+                  "value": "paper",
+                  "actions": [
+                    {
+                      "storage": "1",
+                      "varName": "result",
+                      "min": "1",
+                      "max": "3",
+                      "name": "Generate Random Number"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "result",
+                      "branches": [
+                        {
+                          "comparison": "1",
+                          "value": "1",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył papier, bot używa nożyczki.\n\nBot wygrywa!!",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "2",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył papier, bot używa kamień.\n\n${member} wygrywa!!",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "3",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył papier, bot użyl papier.\n\nRemis...",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "Multi-Check Variable"
+                    }
+                  ]
+                },
+                {
+                  "comparison": "1",
+                  "value": "scissors",
+                  "actions": [
+                    {
+                      "storage": "1",
+                      "varName": "result",
+                      "min": "1",
+                      "max": "3",
+                      "name": "Generate Random Number"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "result",
+                      "branches": [
+                        {
+                          "comparison": "1",
+                          "value": "1",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył nożyczki, bot użył kamień.\n\nBot wygrywa!!",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "2",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} użył nożyczki, bot użył papier.\n\n${member} wygrywa!!",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "3",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "${member} uzył nożyczki, bot użył nożyczki.\n\nRemis...",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "Multi-Check Variable"
+                    }
+                  ]
+                }
+              ],
+              "name": "Multi-Check Variable"
+            }
+          ]
+        }
+      ],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "msg",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Play rock-paper-scissors against the bot!"
+}

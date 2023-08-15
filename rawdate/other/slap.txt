@@ -1,0 +1,34 @@
+{
+  "name": "Slap",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "StPkC",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} slapped ${slashParams(\"person\")}!",
+      "buttons": [],
+      "selectMenus": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "file": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "person",
+      "description": "The person who will be slapped!",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Slaps whoever is chosen."
+}

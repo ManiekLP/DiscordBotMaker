@@ -1,0 +1,235 @@
+{
+  "name": "antylink",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "ozUAC",
+  "actions": [
+    {
+      "message": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "mtext",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "101",
+      "varName2": "1134442715141124147",
+      "branch": {
+        "iftrue": "1",
+        "iffalse": "0"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".pl",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".com",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".net",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": "www.",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": "https://",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".eu",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".me",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".store",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".site",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".cloud",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "mtext",
+      "comparison": "5",
+      "value": ".info",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "1",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "mid",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "AntiLink",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "101",
+      "varName": "${tempVars(\"mid\")}",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${server.name} | AntyLink",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${member} nie masz wystarczających permisji aby wysyłać linki na tym serwerze!",
+          "fields": [
+            {
+              "name": "Twoja wiadomość:",
+              "value": "${tempVars(\"mtext\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} nie masz uprawnieć do wysyłania linków!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "3"
+}

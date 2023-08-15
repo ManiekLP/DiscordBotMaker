@@ -1,0 +1,746 @@
+{
+  "name": "ticket",
+  "permissions": "ADMINISTRATOR",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "kVvXf",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [
+        {
+          "placeholder": "Tickety",
+          "id": "msg-select-f644525",
+          "tempVarName": "valueoption",
+          "row": "",
+          "min": "1",
+          "max": "1",
+          "mode": "PERSISTENT",
+          "time": "300000",
+          "options": [
+            {
+              "label": "Mam pytanie",
+              "description": "",
+              "value": "1",
+              "emoji": "${customEmoji(\"__\")}",
+              "default": "false"
+            }
+          ],
+          "actions": [
+            {
+              "storage": "1",
+              "varName": "valueoption",
+              "branches": [
+                {
+                  "comparison": "1",
+                  "value": "1",
+                  "actions": [
+                    {
+                      "title": "Podanie",
+                      "textInputs": [
+                        {
+                          "name": "Nick z mc:",
+                          "placeholder": "Nick z MC",
+                          "minLength": "0",
+                          "maxLength": "100",
+                          "id": "T3",
+                          "row": "",
+                          "style": "SHORT",
+                          "required": "true"
+                        }
+                      ],
+                      "name": "Show Modal"
+                    },
+                    {
+                      "time": "1",
+                      "measurement": "1",
+                      "name": "Wait"
+                    },
+                    {
+                      "member": "1",
+                      "varName": "",
+                      "info": "2",
+                      "storage": "1",
+                      "varName2": "nazwa",
+                      "name": "Store Member Info"
+                    },
+                    {
+                      "member": "1",
+                      "varName": "",
+                      "info": "1",
+                      "storage": "1",
+                      "varName2": "id",
+                      "name": "Store Member Info"
+                    },
+                    {
+                      "channelName": "Pytanie-${tempVars(\"nazwa\")}",
+                      "topic": "",
+                      "position": "",
+                      "storage": "1",
+                      "varName": "channel",
+                      "categoryID": "1134424520392978492",
+                      "reason": "",
+                      "name": "Create Text Channel"
+                    },
+                    {
+                      "channel": "3",
+                      "varName": "channel",
+                      "role": "101",
+                      "varName2": "1138176474537525408",
+                      "permission": "VIEW_CHANNEL",
+                      "state": "0",
+                      "reason": "",
+                      "name": "Set Role Channel Perms"
+                    },
+                    {
+                      "storage": "3",
+                      "varName": "channel",
+                      "permission": "VIEW_CHANNEL",
+                      "state": "1",
+                      "reason": "",
+                      "name": "Set Channel Permissions"
+                    },
+                    {
+                      "channel": "3",
+                      "varName": "channel",
+                      "member": "1",
+                      "varName2": "",
+                      "permission": "VIEW_CHANNEL",
+                      "state": "0",
+                      "reason": "",
+                      "name": "Set Member Channel Perms"
+                    },
+                    {
+                      "channel": "3",
+                      "varName": "channel",
+                      "role": "101",
+                      "varName2": "1089974969905189015",
+                      "permission": "SEND_MESSAGES",
+                      "state": "0",
+                      "reason": "",
+                      "name": "Set Role Channel Perms"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "${tempVars(\"channel\")}, Twój ticket!",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [],
+                      "reply": true,
+                      "ephemeral": true,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    },
+                    {
+                      "channel": "3",
+                      "varName": "channel",
+                      "info": "1",
+                      "storage": "1",
+                      "varName2": "chid",
+                      "name": "Store Channel Info"
+                    },
+                    {
+                      "dataName": "${tempVars(\"chid\")}",
+                      "changeType": "0",
+                      "value": "tempVars(\"id\")",
+                      "name": "Control Global Data"
+                    },
+                    {
+                      "channel": "5",
+                      "varName": "channel",
+                      "message": "${member}",
+                      "buttons": [
+                        {
+                          "name": "Zamknij",
+                          "type": "DANGER",
+                          "id": "msg-button-9eb2ac1",
+                          "row": "",
+                          "url": "",
+                          "emoji": "",
+                          "mode": "PERSISTENT",
+                          "time": "",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "channel2",
+                              "info": "1",
+                              "storage": "1",
+                              "varName2": "chid1",
+                              "name": "Store Channel Info"
+                            },
+                            {
+                              "dataName": "${tempVars(\"chid1\")}",
+                              "defaultVal": "",
+                              "storage": "1",
+                              "varName": "memid",
+                              "name": "Store Global Data"
+                            },
+                            {
+                              "member": "1",
+                              "varName": "",
+                              "info": "0",
+                              "storage": "1",
+                              "varName2": "memob",
+                              "name": "Store Member Info"
+                            },
+                            {
+                              "member": "0",
+                              "varName": "",
+                              "info": "0",
+                              "storage": "1",
+                              "varName2": "pingg",
+                              "name": "Store Member Info"
+                            },
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [
+                                {
+                                  "title": "",
+                                  "url": "",
+                                  "color": "YELLOW",
+                                  "timestamp": "false",
+                                  "imageUrl": "",
+                                  "thumbUrl": "",
+                                  "description": "Pomyślnie zamknięto ticket  przez ${tempVars(\"memob\")} :)",
+                                  "fields": [],
+                                  "author": "",
+                                  "authorUrl": "",
+                                  "authorIcon": "",
+                                  "footerText": "",
+                                  "footerIconUrl": ""
+                                }
+                              ],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            },
+                            {
+                              "channel": "101",
+                              "varName": "${tempVars(\"chid1\")}",
+                              "member": "101",
+                              "varName2": "${tempVars(\"memid\")}",
+                              "permission": "VIEW_CHANNEL",
+                              "state": "2",
+                              "reason": "",
+                              "name": "Set Member Channel Perms"
+                            },
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "",
+                              "buttons": [
+                                {
+                                  "name": "Usuń",
+                                  "type": "DANGER",
+                                  "id": "msg-button-3400f18",
+                                  "row": "",
+                                  "url": "",
+                                  "emoji": "🗑",
+                                  "mode": "PERSISTENT",
+                                  "time": "",
+                                  "actions": [
+                                    {
+                                      "storage": "0",
+                                      "varName": "",
+                                      "reason": "",
+                                      "name": "Delete Channel"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Otwórz ",
+                                  "type": "SUCCESS",
+                                  "id": "msg-button-d07c80e",
+                                  "row": "",
+                                  "url": "",
+                                  "emoji": "🔓",
+                                  "mode": "PERSISTENT",
+                                  "time": "",
+                                  "actions": [
+                                    {
+                                      "channel": "0",
+                                      "varName": "channel2",
+                                      "info": "1",
+                                      "storage": "1",
+                                      "varName2": "chid3",
+                                      "name": "Store Channel Info"
+                                    },
+                                    {
+                                      "dataName": "${tempVars(\"chid3\")}",
+                                      "defaultVal": "",
+                                      "storage": "1",
+                                      "varName": "memid3",
+                                      "name": "Store Global Data"
+                                    },
+                                    {
+                                      "member": "1",
+                                      "varName": "",
+                                      "info": "0",
+                                      "storage": "1",
+                                      "varName2": "memob",
+                                      "name": "Store Member Info"
+                                    },
+                                    {
+                                      "channel": "0",
+                                      "varName": "",
+                                      "message": "",
+                                      "buttons": [],
+                                      "selectMenus": [],
+                                      "attachments": [],
+                                      "embeds": [
+                                        {
+                                          "title": "",
+                                          "url": "",
+                                          "color": "GREEN",
+                                          "timestamp": "false",
+                                          "imageUrl": "",
+                                          "thumbUrl": "",
+                                          "description": "Pomyślnie otworzono ticket  przez ${tempVars(\"memob\")} :)",
+                                          "fields": [],
+                                          "author": "",
+                                          "authorUrl": "",
+                                          "authorIcon": "",
+                                          "footerText": "",
+                                          "footerIconUrl": ""
+                                        }
+                                      ],
+                                      "reply": false,
+                                      "ephemeral": false,
+                                      "tts": false,
+                                      "overwrite": false,
+                                      "dontSend": false,
+                                      "editMessage": "0",
+                                      "editMessageVarName": "",
+                                      "storage": "0",
+                                      "varName2": "",
+                                      "name": "Send Message"
+                                    },
+                                    {
+                                      "channel": "101",
+                                      "varName": "${tempVars(\"chid3\")}",
+                                      "member": "101",
+                                      "varName2": "${tempVars(\"memid3\")}",
+                                      "permission": "VIEW_CHANNEL",
+                                      "state": "0",
+                                      "reason": "",
+                                      "name": "Set Member Channel Perms"
+                                    },
+                                    {
+                                      "storage": "0",
+                                      "varName": "closeembed",
+                                      "reason": "",
+                                      "name": "Delete Message"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [
+                                {
+                                  "title": "`Support team ticket controls`",
+                                  "url": "",
+                                  "color": "BLACK",
+                                  "timestamp": "false",
+                                  "imageUrl": "",
+                                  "thumbUrl": "",
+                                  "description": "",
+                                  "fields": [],
+                                  "author": "",
+                                  "authorUrl": "",
+                                  "authorIcon": "",
+                                  "footerText": "",
+                                  "footerIconUrl": ""
+                                }
+                              ],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "1",
+                              "varName2": "closeembed",
+                              "name": "Send Message"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Zamknij z Powodem",
+                          "type": "DANGER",
+                          "id": "msg-button-616e2e6",
+                          "row": "",
+                          "url": "",
+                          "emoji": "",
+                          "mode": "PERSISTENT",
+                          "time": "",
+                          "actions": [
+                            {
+                              "title": "Zamykanie Ticketa",
+                              "textInputs": [
+                                {
+                                  "name": "Powód",
+                                  "placeholder": "",
+                                  "minLength": "0",
+                                  "maxLength": "1000",
+                                  "id": "powod",
+                                  "row": "",
+                                  "style": "SHORT",
+                                  "required": "true"
+                                }
+                              ],
+                              "name": "Show Modal"
+                            },
+                            {
+                              "channel": "0",
+                              "varName": "channel2",
+                              "info": "1",
+                              "storage": "1",
+                              "varName2": "chid1",
+                              "name": "Store Channel Info"
+                            },
+                            {
+                              "dataName": "${tempVars(\"chid1\")}",
+                              "defaultVal": "",
+                              "storage": "1",
+                              "varName": "memid",
+                              "name": "Store Global Data"
+                            },
+                            {
+                              "member": "1",
+                              "varName": "",
+                              "info": "0",
+                              "storage": "1",
+                              "varName2": "memob",
+                              "name": "Store Member Info"
+                            },
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [
+                                {
+                                  "title": "",
+                                  "url": "",
+                                  "color": "YELLOW",
+                                  "timestamp": "false",
+                                  "imageUrl": "",
+                                  "thumbUrl": "",
+                                  "description": "Pomyślnie zamknięto ticket  przez ${tempVars(\"memob\")} z powodu: **`${tempVars(\"powod\")}`**",
+                                  "fields": [],
+                                  "author": "",
+                                  "authorUrl": "",
+                                  "authorIcon": "",
+                                  "footerText": "",
+                                  "footerIconUrl": ""
+                                }
+                              ],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            },
+                            {
+                              "channel": "101",
+                              "varName": "${tempVars(\"chid1\")}",
+                              "member": "101",
+                              "varName2": "${tempVars(\"memid\")}",
+                              "permission": "VIEW_CHANNEL",
+                              "state": "2",
+                              "reason": "",
+                              "name": "Set Member Channel Perms"
+                            },
+                            {
+                              "channel": "101",
+                              "varName": "${tempVars(\"memid\")}",
+                              "message": "",
+                              "buttons": [],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [
+                                {
+                                  "title": "",
+                                  "url": "",
+                                  "color": "YELLOW",
+                                  "timestamp": "false",
+                                  "imageUrl": "",
+                                  "thumbUrl": "",
+                                  "description": "Twój ticket został zamknięty przez ${tempVars(\"memob\")} z powodu: **`${tempVars(\"powod\")}`**",
+                                  "fields": [],
+                                  "author": "",
+                                  "authorUrl": "",
+                                  "authorIcon": "",
+                                  "footerText": "",
+                                  "footerIconUrl": ""
+                                }
+                              ],
+                              "reply": false,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "0",
+                              "varName2": "",
+                              "name": "Send Message"
+                            },
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "message": "",
+                              "buttons": [
+                                {
+                                  "name": "Usuń",
+                                  "type": "DANGER",
+                                  "id": "msg-button-15e1c54",
+                                  "row": "",
+                                  "url": "",
+                                  "emoji": "🗑",
+                                  "mode": "PERSISTENT",
+                                  "time": "",
+                                  "actions": [
+                                    {
+                                      "storage": "0",
+                                      "varName": "",
+                                      "reason": "",
+                                      "name": "Delete Channel"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Otwórz ",
+                                  "type": "SUCCESS",
+                                  "id": "msg-button-01e36a2",
+                                  "row": "",
+                                  "url": "",
+                                  "emoji": "🔓",
+                                  "mode": "PERSISTENT",
+                                  "time": "",
+                                  "actions": [
+                                    {
+                                      "channel": "0",
+                                      "varName": "channel2",
+                                      "info": "1",
+                                      "storage": "1",
+                                      "varName2": "chid3",
+                                      "name": "Store Channel Info"
+                                    },
+                                    {
+                                      "dataName": "${tempVars(\"chid3\")}",
+                                      "defaultVal": "",
+                                      "storage": "1",
+                                      "varName": "memid3",
+                                      "name": "Store Global Data"
+                                    },
+                                    {
+                                      "channel": "101",
+                                      "varName": "${tempVars(\"chid3\")}",
+                                      "member": "101",
+                                      "varName2": "${tempVars(\"memid3\")}",
+                                      "permission": "VIEW_CHANNEL",
+                                      "state": "0",
+                                      "reason": "",
+                                      "name": "Set Member Channel Perms"
+                                    },
+                                    {
+                                      "member": "1",
+                                      "varName": "",
+                                      "info": "0",
+                                      "storage": "1",
+                                      "varName2": "memob",
+                                      "name": "Store Member Info"
+                                    },
+                                    {
+                                      "channel": "0",
+                                      "varName": "",
+                                      "message": "",
+                                      "buttons": [],
+                                      "selectMenus": [],
+                                      "attachments": [],
+                                      "embeds": [
+                                        {
+                                          "title": "",
+                                          "url": "",
+                                          "color": "GREEN",
+                                          "timestamp": "false",
+                                          "imageUrl": "",
+                                          "thumbUrl": "",
+                                          "description": "Pomyślnie otworzono ticket  przez ${tempVars(\"memob\")} :)",
+                                          "fields": [],
+                                          "author": "",
+                                          "authorUrl": "",
+                                          "authorIcon": "",
+                                          "footerText": "",
+                                          "footerIconUrl": ""
+                                        }
+                                      ],
+                                      "reply": false,
+                                      "ephemeral": false,
+                                      "tts": false,
+                                      "overwrite": false,
+                                      "dontSend": false,
+                                      "editMessage": "0",
+                                      "editMessageVarName": "",
+                                      "storage": "0",
+                                      "varName2": "",
+                                      "name": "Send Message"
+                                    },
+                                    {
+                                      "storage": "0",
+                                      "varName": "closeembed",
+                                      "reason": "",
+                                      "name": "Delete Message"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "selectMenus": [],
+                              "attachments": [],
+                              "embeds": [
+                                {
+                                  "title": "`Support team ticket controls`",
+                                  "url": "",
+                                  "color": "BLACK",
+                                  "timestamp": "false",
+                                  "imageUrl": "",
+                                  "thumbUrl": "",
+                                  "description": "",
+                                  "fields": [],
+                                  "author": "",
+                                  "authorUrl": "",
+                                  "authorIcon": "",
+                                  "footerText": "",
+                                  "footerIconUrl": ""
+                                }
+                              ],
+                              "reply": true,
+                              "ephemeral": false,
+                              "tts": false,
+                              "overwrite": false,
+                              "dontSend": false,
+                              "editMessage": "0",
+                              "editMessageVarName": "",
+                              "storage": "1",
+                              "varName2": "closeembed",
+                              "name": "Send Message"
+                            }
+                          ]
+                        }
+                      ],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Pytanie",
+                          "url": "",
+                          "color": "GOLD",
+                          "timestamp": "true",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "",
+                          "fields": [
+                            {
+                              "name": "Nick:",
+                              "value": "${tempVars(\"T3\")}",
+                              "inline": "false"
+                            }
+                          ],
+                          "author": "",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": false,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                }
+              ],
+              "name": "Multi-Check Variable"
+            }
+          ]
+        }
+      ],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${server.name} || Tickety ",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Aby otrzymać pomoc od administracji serwera, zerknij na poniższe kategorie pomocy.\nNastępnie podążaj według instrukcji.",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": false,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0",
+  "description": "TicketSystem"
+}

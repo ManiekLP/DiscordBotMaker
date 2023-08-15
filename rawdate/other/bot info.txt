@@ -1,0 +1,213 @@
+{
+  "name": "bot",
+  "permissions": "MANAGE_CHANNELS",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "KkdTi",
+  "actions": [
+    {
+      "info": "2",
+      "storage": "1",
+      "varName2": "bot.ping",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "21",
+      "storage": "1",
+      "varName2": "bot.djs",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "31",
+      "storage": "1",
+      "varName2": "bot.ndjs",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "1",
+      "storage": "1",
+      "varName2": "bot.ready",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "20",
+      "storage": "1",
+      "varName2": "bot.id",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "28",
+      "storage": "1",
+      "varName2": "bot.os",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "date": "${tempVars(\"bot.ready\")}",
+      "info": "2",
+      "storage": "1",
+      "varName": "bot.unixtimestap",
+      "name": "Store Date Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "bot.ping",
+      "comparison": "3",
+      "value": "109",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": " #6a85b0",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**<:bot:968659243542650900> Manager * Guilds**\n\n> <:question:968646961785876483> **Id:** `${tempVars(\"bot.id\")}`\n> <:question:968646961785876483> **Prefix:** `/` albo `!`\n> <:ping:969041876898443274> **Ping:** <:dobry:969041876911013959>\n> <:djs:969038005232885830> **DiscordJs:** `${tempVars(\"bot.djs\")}`\n> <:nodejs:969038005178368100> **NodeJs:** `${tempVars(\"bot.ndjs\")}`\n> <:desktop:969041876906815498> **System:** `${tempVars(\"bot.os\")}`\n\n> <:verified:968685026063548456> **Włączenie** <t:${tempVars(\"bot.unixtimestap\")}:R>",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "bot.ping",
+      "comparison": "3",
+      "value": "129",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": " #6a85b0",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**🤖 Manager * Guilds**\n\n> 🗃 **Id:** `${tempVars(\"bot.id\")}`\n> ❗ **Prefix:** `/` albo `!`\n> 📈 **Ping:** <:srednie:969041904757014558>\n> 🔵 **DiscordJs:** `${tempVars(\"bot.djs\")}`\n> 🟢 **NodeJs:** `${tempVars(\"bot.ndjs\")}`\n> ⚙ **System:** `${tempVars(\"bot.os\")}`\n> \n> ✅ **Włączenie** <t:${tempVars(\"bot.unixtimestap\")}:R>",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": " #6a85b0",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**🤖 Manager * Guilds**\n\n> 🗃 **Id:** `${tempVars(\"bot.id\")}`\n> ❗ **Prefix:** `/` albo `!`\n> 📈 **Ping:** <:slaby:969041876919402496>\n> 🔵 **DiscordJs:** `${tempVars(\"bot.djs\")}`\n> 🟢 **NodeJs:** `${tempVars(\"bot.ndjs\")}`\n> ⚙ **System:** `${tempVars(\"bot.os\")}`\n> \n> ✅ **Włączenie** <t:${tempVars(\"bot.unixtimestap\")}:R>",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Zaawansowane informacje o bocie!"
+}

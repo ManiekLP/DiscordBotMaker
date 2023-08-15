@@ -1,0 +1,228 @@
+{
+  "name": "embed",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "KCVIC",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_MESSAGES",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "6"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "#02bafb",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "https://cdn.discordapp.com/attachments/972420582538870784/972459370497576990/Guide_Official_logo.png",
+          "description": "<:reply:972480005445668914> [${tempVars(\"username\")}](https://discord.com/users/${tempVars(\"id\")}), niestety nie posiadasz wymaganych uprawnień, aby użyć tego polecenia!",
+          "fields": [
+            {
+              "name": "<:ustawienia:972473885452800050> Wymagane uprawnienia:",
+              "value": "Zarządzanie wiadomościami (` MANAGE_MESSAGES `)",
+              "inline": "false"
+            }
+          ],
+          "author": "Nie możesz użyć tego polecenia...",
+          "authorUrl": "",
+          "authorIcon": "https://cdn.discordapp.com/attachments/972420582538870784/972459370497576990/Guide_Official_logo.png",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Rozpoczynam tworzenie embeda!",
+      "textInputs": [
+        {
+          "name": "Podaj tytuł:",
+          "placeholder": "Jaki będzie tytuł embeda?",
+          "minLength": "1",
+          "maxLength": "256",
+          "id": "tytul",
+          "row": "",
+          "style": "SHORT",
+          "required": "true"
+        },
+        {
+          "name": "Podaj opis:",
+          "placeholder": "Jaki będzie opis embeda?",
+          "minLength": "1",
+          "maxLength": "4000",
+          "id": "opis",
+          "row": "",
+          "style": "PARAGRAPH",
+          "required": "true"
+        },
+        {
+          "name": "Podaj stopkę:",
+          "placeholder": "Jaka będzie stopka embeda?",
+          "minLength": "1",
+          "maxLength": "2048",
+          "id": "footer",
+          "row": "",
+          "style": "SHORT",
+          "required": "false"
+        },
+        {
+          "name": "Podaj autora:",
+          "placeholder": "Kto jest autorem wiadomości?",
+          "minLength": "1",
+          "maxLength": "256",
+          "id": "author",
+          "row": "",
+          "style": "SHORT",
+          "required": "false"
+        },
+        {
+          "name": "Podaj kolor wiadomości:",
+          "placeholder": "Jaki będzie kolor wiadomości?",
+          "minLength": "6",
+          "maxLength": "7",
+          "id": "kolor",
+          "row": "",
+          "style": "SHORT",
+          "required": "true"
+        }
+      ],
+      "name": "Show Modal"
+    },
+    {
+      "storage": "1",
+      "varName": "kolor",
+      "comparison": "6",
+      "value": "a|b|c|d|e|f|0|1|2|3|4|5|6|7|8|9|#",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "10"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Podałeś błędny kod heksadecymalny. Nie potrafię znaleźć tego koloru!",
+          "fields": [
+            {
+              "name": "Prawidłowe użycie kodu:",
+              "value": "Np. **#FFFFFF**, **FFFFFF**, **#FFffFF** lub **fFfFfF**!",
+              "inline": "false"
+            }
+          ],
+          "author": "Coś poszło nie tak :(",
+          "authorUrl": "",
+          "authorIcon": "https://cdn.discordapp.com/attachments/972420582538870784/972459370497576990/Guide_Official_logo.png",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${tempVars(\"tytul\")}",
+          "url": "",
+          "color": "${tempVars(\"kolor\")}",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${tempVars(\"opis\")}",
+          "fields": [],
+          "author": "${tempVars(\"author\")}",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"footer\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": false,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4"
+}

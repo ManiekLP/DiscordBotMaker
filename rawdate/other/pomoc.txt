@@ -1,0 +1,175 @@
+{
+  "name": "pomoc",
+  "permissions": "MANAGE_CHANNELS",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "TgaVN",
+  "actions": [
+    {
+      "comment": "wejdż w ackje 1# następnie selects 2 krok kliknij 2 raży w wybierż następnie 2 raży klikinj Multi-chceck variable i wejdż w war 1",
+      "color": "#0011ff",
+      "name": "Comment"
+    },
+    {
+      "comment": "następnie w send message kliknij 2 raży i następnie w embed i description tak samo jest z var 2 to samo",
+      "color": "#11ff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [
+        {
+          "placeholder": "wybierz",
+          "id": "msg-select-2d96efd",
+          "tempVarName": "value",
+          "row": "1",
+          "min": "1",
+          "max": "1",
+          "mode": "PERSISTENT",
+          "time": "",
+          "options": [
+            {
+              "label": "Przykład",
+              "description": "1",
+              "value": "1",
+              "emoji": "🔰",
+              "default": "false"
+            },
+            {
+              "label": "Przykład",
+              "description": "2",
+              "value": "2",
+              "emoji": "⚙",
+              "default": "false"
+            }
+          ],
+          "actions": [
+            {
+              "storage": "1",
+              "varName": "value",
+              "branches": [
+                {
+                  "comparison": "1",
+                  "value": "1",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Komendy **`1`**",
+                          "url": "",
+                          "color": "GREEN",
+                          "timestamp": "true",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "przykład",
+                          "fields": [],
+                          "author": "Pokój Pryncypałków",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": true,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                },
+                {
+                  "comparison": "1",
+                  "value": "2",
+                  "actions": [
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [
+                        {
+                          "title": "Komendy **`2`**",
+                          "url": "",
+                          "color": "#e803fc",
+                          "timestamp": "true",
+                          "imageUrl": "",
+                          "thumbUrl": "",
+                          "description": "Przykład",
+                          "fields": [],
+                          "author": "Pokój Pryncypałków",
+                          "authorUrl": "",
+                          "authorIcon": "",
+                          "footerText": "",
+                          "footerIconUrl": ""
+                        }
+                      ],
+                      "reply": true,
+                      "ephemeral": true,
+                      "tts": false,
+                      "overwrite": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                }
+              ],
+              "name": "Multi-Check Variable"
+            }
+          ]
+        }
+      ],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "**Pomoc**",
+          "url": "",
+          "color": "RED",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Wybierz jedną z opcji :)",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [],
+  "description": "pomoc"
+}
