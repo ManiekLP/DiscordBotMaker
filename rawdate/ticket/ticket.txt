@@ -1,9 +1,9 @@
 {
-  "name": "ticket",
+  "name": "tickets",
   "permissions": "ADMINISTRATOR",
   "permissions2": "NONE",
   "restriction": "1",
-  "_id": "kVvXf",
+  "_id": "TNEhW",
   "actions": [
     {
       "storage": "0",
@@ -31,7 +31,7 @@
               "label": "Mam pytanie",
               "description": "",
               "value": "1",
-              "emoji": "${customEmoji(\"__\")}",
+              "emoji": "❓",
               "default": "false"
             }
           ],
@@ -87,7 +87,7 @@
                       "position": "",
                       "storage": "1",
                       "varName": "channel",
-                      "categoryID": "1134424520392978492",
+                      "categoryID": "",
                       "reason": "",
                       "name": "Create Text Channel"
                     },
