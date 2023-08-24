@@ -1,0 +1,257 @@
+{
+  "name": "partner",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "smjJQ",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "setup.partner.channel",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "channel",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "setup.partner.role1",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "role1",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "setup.partner.role2",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "role2",
+      "name": "Store Server Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "101",
+      "varName2": "${tempVars(\"role1\")}",
+      "branch": {
+        "iftrue": "3",
+        "iffalse": "0",
+        "iftrueVal": "2"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "❌ Błąd",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**Nie posiadasz wystarczających uprawnień by to zrobić!**",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Reklama",
+      "textInputs": [
+        {
+          "name": "Reklama",
+          "placeholder": "",
+          "minLength": "0",
+          "maxLength": "1000",
+          "id": "reklama",
+          "row": "",
+          "style": "PARAGRAPH",
+          "required": "true"
+        }
+      ],
+      "name": "Show Modal"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "sevid",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "partner.${tempVars(\"sevid\")}.count",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "partner.${tempVars(\"sevid\")}.count",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "part.liczba",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "uavatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "uobject",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "partner",
+      "info": "16",
+      "storage": "1",
+      "varName2": "pavatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "partner",
+      "info": "0",
+      "storage": "1",
+      "varName2": "pobject",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "partner",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memid",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName2": "memid",
+      "role": "101",
+      "varName": "role2",
+      "reason": "",
+      "name": "Add Member Role"
+    },
+    {
+      "text": "${tempVars(\"reklama\")}",
+      "text2": "@everyone",
+      "text3": "",
+      "info": "1",
+      "storage": "1",
+      "varName": "msg1",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"msg1\")}",
+      "text2": "@here",
+      "text3": "",
+      "info": "1",
+      "storage": "1",
+      "varName": "msg2",
+      "name": "Replace Text"
+    },
+    {
+      "channel": "103",
+      "varName": "${tempVars(\"channel\")}",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "BLUE",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**┍━━━━━━━━━━━━━★━━━━━━━━━━━━━┑\n\n・Partner: ${tempVars(\"pobject\")}\n・Realizator: ${tempVars(\"uobject\")}\n・Liczba zrealizowanych partnerstw: ${tempVars(\"part.liczba\")}\n\n┕━━━━━━━━━━━━━★━━━━━━━━━━━━━┙**\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": false,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "103",
+      "varName": "${tempVars(\"channel\")}",
+      "message": "${tempVars(\"msg2\")}",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "partner",
+      "description": "Spinguj partnera",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
