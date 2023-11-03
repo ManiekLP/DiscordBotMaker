@@ -1,0 +1,390 @@
+{
+  "name": "legitcheck",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "popKx",
+  "actions": [
+    {
+      "comment": "#4, #7, #10, #13, #15 ustaw id kanału i eventualnie zmień wygląd embeda",
+      "color": "#ff4242",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "4",
+      "varName": "ocena",
+      "comparison": "3",
+      "value": "2",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "103",
+      "varName": "1149386099446251660",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Legitcheck wystawiony przez ${tempVars(\"username\")}",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "true",
+          "imageUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163540876652458095/banner-leafcode.png?ex=653ff2e2&is=652d7de2&hm=244a0307dd1993b735553f391bba5a52e9e843c40469452b144d094ffe74b9e7&",
+          "thumbUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&",
+          "description": "",
+          "fields": [
+            {
+              "name": "Wykonawca:",
+              "value": "> ${slashParams(\"osoba\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Klient:",
+              "value": "> ${member}",
+              "inline": "false"
+            },
+            {
+              "name": "Własna opinia:",
+              "value": "> ${slashParams(\"opinia\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Ocena:",
+              "value": "> :star:",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "© leafcode.pl •",
+          "footerIconUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "4",
+      "varName": "ocena",
+      "comparison": "1",
+      "value": "2",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "103",
+      "varName": "1149386099446251660",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Legitcheck wystawiony przez ${tempVars(\"username\")}",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "true",
+          "imageUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163540876652458095/banner-leafcode.png?ex=653ff2e2&is=652d7de2&hm=244a0307dd1993b735553f391bba5a52e9e843c40469452b144d094ffe74b9e7&",
+          "thumbUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&",
+          "description": "",
+          "fields": [
+            {
+              "name": "Wykonawca:",
+              "value": "> ${slashParams(\"osoba\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Klient:",
+              "value": "> ${member}",
+              "inline": "false"
+            },
+            {
+              "name": "Własna opinia:",
+              "value": "> ${slashParams(\"opinia\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Ocena:",
+              "value": "> :star: :star:",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "© leafcode.pl •",
+          "footerIconUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "4",
+      "varName": "ocena",
+      "comparison": "1",
+      "value": "3",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "103",
+      "varName": "1149386099446251660",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Legitcheck wystawiony przez ${tempVars(\"username\")}",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "true",
+          "imageUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163540876652458095/banner-leafcode.png?ex=653ff2e2&is=652d7de2&hm=244a0307dd1993b735553f391bba5a52e9e843c40469452b144d094ffe74b9e7&",
+          "thumbUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&",
+          "description": "",
+          "fields": [
+            {
+              "name": "Wykonawca:",
+              "value": "> ${slashParams(\"osoba\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Klient:",
+              "value": "> ${member}",
+              "inline": "false"
+            },
+            {
+              "name": "Własna opinia:",
+              "value": "> ${slashParams(\"opinia\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Ocena:",
+              "value": "> :star: :star: :star:",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "© leafcode.pl •",
+          "footerIconUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "4",
+      "varName": "ocena",
+      "comparison": "1",
+      "value": "4",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "103",
+      "varName": "1149386099446251660",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Legitcheck wystawiony przez ${tempVars(\"username\")}",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "true",
+          "imageUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163540876652458095/banner-leafcode.png?ex=653ff2e2&is=652d7de2&hm=244a0307dd1993b735553f391bba5a52e9e843c40469452b144d094ffe74b9e7&",
+          "thumbUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&",
+          "description": "",
+          "fields": [
+            {
+              "name": "Wykonawca:",
+              "value": "> ${slashParams(\"osoba\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Klient:",
+              "value": "> ${member}",
+              "inline": "false"
+            },
+            {
+              "name": "Własna opinia:",
+              "value": "> ${slashParams(\"opinia\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Ocena:",
+              "value": "> :star: :star: :star: :star:",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "© leafcode.pl •",
+          "footerIconUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "103",
+      "varName": "1149386099446251660",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Legitcheck wystawiony przez ${tempVars(\"username\")}",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "true",
+          "imageUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163540876652458095/banner-leafcode.png?ex=653ff2e2&is=652d7de2&hm=244a0307dd1993b735553f391bba5a52e9e843c40469452b144d094ffe74b9e7&",
+          "thumbUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&",
+          "description": "",
+          "fields": [
+            {
+              "name": "Wykonawca:",
+              "value": "> ${slashParams(\"osoba\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Klient:",
+              "value": "> ${member}",
+              "inline": "false"
+            },
+            {
+              "name": "Własna opinia:",
+              "value": "> ${slashParams(\"opinia\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Ocena:",
+              "value": "> :star: :star: :star: :star: :star:",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "© leafcode.pl •",
+          "footerIconUrl": "https://cdn.discordapp.com/attachments/811312176110501928/1163533833040298055/logo-leafcode.png?ex=653fec53&is=652d7753&hm=1a3d456178482c447308a139e253c7a363f8ed9cd8b843824bea3af9da40d6ab&"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "osoba",
+      "description": "Osoba która świadczy ci usługę!",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "ocena",
+      "description": "Ocena obsługi klienta 1-5.",
+      "type": "INTEGER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "opinia",
+      "description": "Własna opinia.",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Wysyła legit check na serwer"
+}
