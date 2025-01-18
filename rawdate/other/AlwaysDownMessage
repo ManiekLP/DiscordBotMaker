@@ -1,0 +1,91 @@
+{
+  "name": "downMessage",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "tWXSL",
+  "actions": [
+    {
+      "comment": ">> Sprawdzamy czy kanał się zgadza.",
+      "color": "#8cff00",
+      "name": "Comment"
+    },
+    {
+      "comment": "#4 zmień id kanału na jakim ma działać ten system",
+      "color": "#00fffb",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "channel.id",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "channel.id",
+      "comparison": "1",
+      "value": "981226716582268968",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "comment": ">> Pobieramy starą wiadomość i usuwamy",
+      "color": "#8cff00",
+      "name": "Comment"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"channel.id\")}.downMessage",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "downMessage.old",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "downMessage.old",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "comment": ">> Wysyłamy nową i zapisujemy ją do zmiennej.",
+      "color": "#8cff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Przykładowa wiadomość",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "downMessage.new",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"channel.id\")}.downMessage",
+      "changeType": "0",
+      "value": "tempVars(\"downMessage.new\")",
+      "name": "Control Server Data"
+    }
+  ],
+  "comType": "3"
+}
